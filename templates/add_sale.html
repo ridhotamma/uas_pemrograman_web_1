@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block content %}
+<h1 class="mb-4">Tambah Penjualan</h1>
+<form method="post">
+  {% csrf_token %}
+  <div class="form-group">
+    <label class="form-label">{{ form.product_name.label_tag }}</label>
+    {{ form.product_name }}
+  </div>
+  <div class="form-group">
+    <label class="form-label">{{ form.product_type.label_tag }}</label>
+    {{ form.product_type }}
+  </div>
+  <div class="form-group">
+    <label class="form-label">{{ form.product_size.label_tag }}</label>
+    {{ form.product_size }}
+  </div>
+  <div class="form-group">
+    <label class="form-label">{{ form.product_price.label_tag }}</label>
+    {{ form.product_price }}
+  </div>
+  <div class="form-group">
+    <label class="form-label">{{ form.product_stock_qty.label_tag }}</label>
+    {{ form.product_stock_qty }}
+  </div>
+  <button type="submit" class="btn btn-primary mt-4">Create</button>
+</form>
+
+{% endblock %}
